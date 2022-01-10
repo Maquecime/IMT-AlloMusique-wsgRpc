@@ -35,6 +35,7 @@ com\music\grpc\MusicServiceOuterClass$MusicOrBuilder.class
 com\music\grpc\MusicServiceOuterClass$1.class
 com\music\grpc\MusicServiceOuterClass$GetMusicResponseOrBuilder.class
 com\music\grpc\MusicServiceOuterClass$GetMusicByIdRequest$1.class
+com\music\grpc\server\MainServer$MusicServiceImpl.class
 com\music\grpc\MusicServiceOuterClass$GetMusicByIdRequest$Builder.class
 com\music\grpc\MusicServiceGrpc$MusicServiceStub.class
 com\music\grpc\MusicServiceOuterClass$CreateMusicRequestOrBuilder.class
@@ -44,6 +45,7 @@ com\music\grpc\MusicServiceGrpc$MusicServiceBlockingStub.class
 com\music\grpc\MusicServiceOuterClass$DeleteMusicRequestOrBuilder.class
 com\music\grpc\MusicServiceOuterClass$Music$Builder.class
 com\music\grpc\MusicServiceOuterClass$UpdateMusicResponse$Builder.class
+com\music\grpc\server\MainServer.class
 com\music\grpc\MusicServiceOuterClass$GetMusicResponse$Builder.class
 com\music\grpc\MusicServiceOuterClass$UpdateMusicResponseOrBuilder.class
 com\music\grpc\MusicServiceGrpc$1.class

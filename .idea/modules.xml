@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/IMT-AlloMusique-wsgRpc.iml" filepath="$PROJECT_DIR$/.idea/IMT-AlloMusique-wsgRpc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-grpc-server/InfresGrpcWebService.iml" filepath="$PROJECT_DIR$/java-grpc-server/InfresGrpcWebService.iml" />
     </modules>
   </component>
 </project>
