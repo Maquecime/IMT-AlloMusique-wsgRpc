@@ -1,0 +1,59 @@
+syntax = "proto3";
+package com.music.grpc;
+import "google/protobuf/empty.proto";
+
+// Main service
+service MusicService {
+  rpc GetAll(google.protobuf.Empty) returns (GetMusicResponse) {};
+  rpc GetById(GetMusicByIdRequest) returns (GetMusicByIdResponse) {};
+  rpc Create(CreateMusicRequest) returns (CreateMusicResponse) {};
+  rpc Update(UpdateMusicRequest) returns (UpdateMusicResponse) {};
+  rpc Delete(DeleteMusicRequest) returns (DeleteMusicResponse) {};
+}
+
+// Messages
+
+message Music {
+  string id = 1;
+  string title = 2;
+  string authorId = 3;
+  int32 nbNote = 4;
+  int32 totalNote = 5;
+}
+
+message GetMusicResponse {
+  string responseMessage = 1;
+  int32 messageCode = 2;
+}
+
+message GetMusicByIdRequest {
+  string music_id = 1;
+}
+
+message GetMusicByIdResponse {
+  Music music = 1;
+}
+
+message CreateMusicRequest {
+  Music music = 1;
+}
+
+message CreateMusicResponse {
+  Music music = 1;
+}
+
+message UpdateMusicRequest {
+  Music music = 1;
+}
+
+message UpdateMusicResponse {
+  Music music = 1;
+}
+
+message DeleteMusicRequest {
+  string music_id = 1;
+}
+
+message DeleteMusicResponse {
+  string music_id = 1;
+}
