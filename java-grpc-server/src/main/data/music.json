@@ -88,7 +88,7 @@
     "title_": "Life",
     "authorId_": 4,
     "nbNote_": 60,
-    "totalNote_": 190,
+    "totalNote_": 200,
     "memoizedIsInitialized": -1,
     "unknownFields": {
       "fields": {},
@@ -103,6 +103,20 @@
     "authorId_": 4,
     "nbNote_": 30,
     "totalNote_": 96,
+    "memoizedIsInitialized": -1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 0
+  },
+  {
+    "id_": 9,
+    "title_": "Rechute",
+    "authorId_": 3,
+    "nbNote_": 0,
+    "totalNote_": 0,
     "memoizedIsInitialized": -1,
     "unknownFields": {
       "fields": {},

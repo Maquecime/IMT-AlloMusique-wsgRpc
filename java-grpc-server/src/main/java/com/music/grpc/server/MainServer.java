@@ -102,7 +102,29 @@ public class MainServer {
 
         @Override
         public void update(MusicServiceOuterClass.UpdateMusicRequest request, StreamObserver<MusicServiceOuterClass.UpdateMusicResponse> responseObserver) {
-            super.update(request, responseObserver);
+            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+            try {
+                JsonReader reader = new JsonReader(new FileReader("D:\\School\\IMT Ales\\S7\\Web Service\\IMT-AlloMusique-wsgRpc\\java-grpc-server\\src\\main\\data\\music.json"));
+                Type dataType = new TypeToken<ArrayList<Music>>(){}.getType();
+                ArrayList<Music> musics = gson.fromJson(reader, dataType);
+                ArrayList<Music> musicsUpdate = new ArrayList<Music>();
+                FileWriter writer = new FileWriter("D:\\School\\IMT Ales\\S7\\Web Service\\IMT-AlloMusique-wsgRpc\\java-grpc-server\\src\\main\\data\\music.json");
+                for (Music music:musics) {
+                    if (music.getId() == request.getMusic().getId()) {
+                        musicsUpdate.add(request.getMusic());
+                    } else {
+                        musicsUpdate.add(music);
+                    }
+                }
+                gson.toJson(musicsUpdate, writer);
+                MusicServiceOuterClass.UpdateMusicResponse response = MusicServiceOuterClass.UpdateMusicResponse.newBuilder().setMessageCode(0).build();
+                responseObserver.onNext(response);
+                responseObserver.onCompleted();
+                reader.close();
+                writer.close();
+            } catch (Exception e) {
+                System.out.println("error : " + e.getMessage());
+            }
         }
 
         @Override

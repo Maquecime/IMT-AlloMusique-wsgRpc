@@ -29,16 +29,28 @@ public class MainClient {
         System.out.println("music at id " + id + " is : " + responseId.getMusic().getTitle());
 
         // Create music
-        MusicServiceOuterClass.Music music = MusicServiceOuterClass.Music.newBuilder()
+        MusicServiceOuterClass.Music musicToCreate = MusicServiceOuterClass.Music.newBuilder()
                 .setId(9)
                 .setTitle("Rechute")
                 .setAuthorId(3)
                 .setNbNote(0)
                 .setTotalNote(0)
                 .build();
-        MusicServiceOuterClass.CreateMusicRequest request = MusicServiceOuterClass.CreateMusicRequest.newBuilder().setMusic(music).build();
-        MusicServiceOuterClass.CreateMusicResponse response = musicServiceBlockingStub.create(request);
-        System.out.println("code creation : " + String.valueOf(response.getMessageCode()));
+        MusicServiceOuterClass.CreateMusicRequest requestCreate = MusicServiceOuterClass.CreateMusicRequest.newBuilder().setMusic(musicToCreate).build();
+        MusicServiceOuterClass.CreateMusicResponse responseCreate = musicServiceBlockingStub.create(requestCreate);
+        System.out.println("code creation : " + String.valueOf(responseCreate.getMessageCode()));
+
+        // Update music
+        MusicServiceOuterClass.Music musicToUpdate = MusicServiceOuterClass.Music.newBuilder()
+                .setId(7)
+                .setTitle("Life")
+                .setAuthorId(4)
+                .setNbNote(60)
+                .setTotalNote(200)
+                .build();
+        MusicServiceOuterClass.UpdateMusicRequest requestUpdate = MusicServiceOuterClass.UpdateMusicRequest.newBuilder().setMusic(musicToUpdate).build();
+        MusicServiceOuterClass.UpdateMusicResponse responseUpdate = musicServiceBlockingStub.update(requestUpdate);
+        System.out.println("code update : " + String.valueOf(responseUpdate.getMessageCode()));
 
         channel.shutdown();
     }
