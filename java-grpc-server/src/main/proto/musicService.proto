@@ -27,7 +27,7 @@ message GetMusicResponse {
 }
 
 message GetMusicByIdRequest {
-  string music_id = 1;
+  int32 music_id = 1;
 }
 
 message GetMusicByIdResponse {
@@ -39,7 +39,7 @@ message CreateMusicRequest {
 }
 
 message CreateMusicResponse {
-  Music music = 1;
+  int32 messageCode = 1;
 }
 
 message UpdateMusicRequest {
@@ -47,13 +47,13 @@ message UpdateMusicRequest {
 }
 
 message UpdateMusicResponse {
-  Music music = 1;
+  int32 messageCode = 1;
 }
 
 message DeleteMusicRequest {
-  string music_id = 1;
+  int32 music_id = 1;
 }
 
 message DeleteMusicResponse {
-  string music_id = 1;
+  int32 messageCode = 1;
 }

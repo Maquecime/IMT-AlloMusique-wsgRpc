@@ -1,50 +1,114 @@
 [
-  { "id_": 1,
-    "title_" : "Macarena",
+  {
+    "id_": 1,
+    "title_": "Macarena",
     "authorId_": 1,
-    "nbNote_":  20,
-    "totalNote_": 90
+    "nbNote_": 20,
+    "totalNote_": 90,
+    "memoizedIsInitialized": -1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 0
   },
-  { "id_": 2,
-    "title_" : "Morose",
+  {
+    "id_": 2,
+    "title_": "Morose",
     "authorId_": 1,
-    "nbNote_":  30,
-    "totalNote_": 124
+    "nbNote_": 30,
+    "totalNote_": 124,
+    "memoizedIsInitialized": -1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 0
   },
-  { "id_": 3,
-    "title_" : "Fusil",
+  {
+    "id_": 3,
+    "title_": "Fusil",
     "authorId_": 2,
-    "nbNote_":  10,
-    "totalNote_": 44
+    "nbNote_": 10,
+    "totalNote_": 44,
+    "memoizedIsInitialized": -1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 0
   },
-  { "id_": 4,
-    "title_" : "Loup Noir",
+  {
+    "id_": 4,
+    "title_": "Loup Noir",
     "authorId_": 2,
-    "nbNote_":  15,
-    "totalNote_": 67
+    "nbNote_": 15,
+    "totalNote_": 67,
+    "memoizedIsInitialized": -1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 0
   },
-  { "id_": 5,
-    "title_" : "Anunnaki",
+  {
+    "id_": 5,
+    "title_": "Anunnaki",
     "authorId_": 3,
-    "nbNote_":  5,
-    "totalNote_": 25
+    "nbNote_": 5,
+    "totalNote_": 25,
+    "memoizedIsInitialized": -1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 0
   },
-  { "id_": 6,
-    "title_" : "Désaccordé",
+  {
+    "id_": 6,
+    "title_": "Désaccordé",
     "authorId_": 3,
-    "nbNote_":  50,
-    "totalNote_": 170
+    "nbNote_": 50,
+    "totalNote_": 170,
+    "memoizedIsInitialized": -1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 0
   },
-  { "id_": 7,
-    "title_" : "Life",
+  {
+    "id_": 7,
+    "title_": "Life",
     "authorId_": 4,
-    "nbNote_":  60,
-    "totalNote_": 190
+    "nbNote_": 60,
+    "totalNote_": 190,
+    "memoizedIsInitialized": -1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 0
   },
-  { "id_": 8,
-    "title_" : "Vibes",
+  {
+    "id_": 8,
+    "title_": "Vibes",
     "authorId_": 4,
-    "nbNote_":  30,
-    "totalNote_": 96
+    "nbNote_": 30,
+    "totalNote_": 96,
+    "memoizedIsInitialized": -1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 0
   }
 ]
