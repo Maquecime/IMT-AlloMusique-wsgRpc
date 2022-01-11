@@ -147,9 +147,6 @@ public class MainServer {
                     System.out.println("Music to delete not found");
                 }
 
-                for (Music music:musics) {
-                    System.out.println(music.getTitle());
-                }
                 gson.toJson(musics, writer);
                 MusicServiceOuterClass.DeleteMusicResponse response = MusicServiceOuterClass.DeleteMusicResponse.newBuilder().setMessageCode(0).build();
                 responseObserver.onNext(response);
