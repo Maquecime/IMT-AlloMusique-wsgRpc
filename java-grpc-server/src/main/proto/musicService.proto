@@ -14,15 +14,15 @@ service MusicService {
 // Messages
 
 message Music {
-  string id = 1;
+  int32 id = 1;
   string title = 2;
-  string authorId = 3;
+  int32 authorId = 3;
   int32 nbNote = 4;
   int32 totalNote = 5;
 }
 
 message GetMusicResponse {
-  string responseMessage = 1;
+  repeated Music music = 1;
   int32 messageCode = 2;
 }
 
