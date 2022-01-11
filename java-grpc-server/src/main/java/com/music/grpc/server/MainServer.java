@@ -129,8 +129,36 @@ public class MainServer {
 
         @Override
         public void delete(MusicServiceOuterClass.DeleteMusicRequest request, StreamObserver<MusicServiceOuterClass.DeleteMusicResponse> responseObserver) {
-            super.delete(request, responseObserver);
-        }
+            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+            try {
+                JsonReader reader = new JsonReader(new FileReader("D:\\School\\IMT Ales\\S7\\Web Service\\IMT-AlloMusique-wsgRpc\\java-grpc-server\\src\\main\\data\\music.json"));
+                Type dataType = new TypeToken<ArrayList<Music>>(){}.getType();
+                ArrayList<Music> musics = gson.fromJson(reader, dataType);
+                FileWriter writer = new FileWriter("D:\\School\\IMT Ales\\S7\\Web Service\\IMT-AlloMusique-wsgRpc\\java-grpc-server\\src\\main\\data\\music.json");
+                int indexToDelete = 0;
+                for (int i = 0; i < musics.size(); i++) {
+                    if (musics.get(i).getId() == request.getMusicId()) {
+                        indexToDelete = i;
+                    }
+                }
+                if (indexToDelete != 0) {
+                    musics.remove(indexToDelete);
+                } else {
+                    System.out.println("Music to delete not found");
+                }
 
+                for (Music music:musics) {
+                    System.out.println(music.getTitle());
+                }
+                gson.toJson(musics, writer);
+                MusicServiceOuterClass.DeleteMusicResponse response = MusicServiceOuterClass.DeleteMusicResponse.newBuilder().setMessageCode(0).build();
+                responseObserver.onNext(response);
+                responseObserver.onCompleted();
+                reader.close();
+                writer.close();
+            } catch (Exception e) {
+                System.out.println("error : " + e.getMessage());
+            }
+        }
     }
 }

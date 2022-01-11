@@ -52,6 +52,12 @@ public class MainClient {
         MusicServiceOuterClass.UpdateMusicResponse responseUpdate = musicServiceBlockingStub.update(requestUpdate);
         System.out.println("code update : " + String.valueOf(responseUpdate.getMessageCode()));
 
+        // Delete music
+
+        MusicServiceOuterClass.DeleteMusicRequest requestDelete = MusicServiceOuterClass.DeleteMusicRequest.newBuilder().setMusicId(id).build();
+        MusicServiceOuterClass.DeleteMusicResponse responseDelete = musicServiceBlockingStub.delete(requestDelete);
+        System.out.println("code delete : " + String.valueOf(responseDelete.getMessageCode()));
+
         channel.shutdown();
     }
 }
